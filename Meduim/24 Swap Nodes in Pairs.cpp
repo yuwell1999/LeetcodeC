@@ -24,6 +24,7 @@ public:
         dummy->next = head;
         ListNode *temp = dummy;
 
+        // 每次需要交换temp后面的两个节点
         while (temp->next != nullptr && temp->next->next != nullptr) {
             ListNode *node1 = temp->next;
             ListNode *node2 = temp->next->next;
