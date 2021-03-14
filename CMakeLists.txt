@@ -3,4 +3,4 @@ project(LeetcodeC)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(LeetcodeC Easy/main.cpp "Meduim/16 3Sum Closest.cpp")
+add_executable(LeetcodeC Easy/main.cpp "Meduim/16 3Sum Closest.cpp" "Meduim/19 Remove Nth Node From End of List.cpp" Meduim/ListNode.h)

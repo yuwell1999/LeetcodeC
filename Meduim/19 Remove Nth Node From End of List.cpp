@@ -1,0 +1,28 @@
+//
+// Created by YuYue on 2021/3/14.
+//
+#include "ListNode.h";
+
+class Solution_19 {
+public:
+    ListNode *removeNthFromEnd(ListNode *head, int n) {
+        ListNode *dummy = new ListNode(0, head); // dummy的后继指向head
+        ListNode *fast = head;
+        ListNode *slow = dummy;
+
+        for (int i = 0; i < n; i++) {
+            fast = fast->next;
+        }
+
+        while (fast) {
+            fast = fast->next;
+            slow = slow->next;
+        }
+
+        slow->next = slow->next->next;
+        ListNode *ans = dummy->next;
+        delete dummy;
+
+        return ans;
+    }
+};
