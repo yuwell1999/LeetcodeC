@@ -34,7 +34,7 @@ public:
 
     void dfs(vector<string> &combinations, const unordered_map<char, string> &phoneMap, const string &digits, int index,
              string &combination) {
-        if (index == digits.length()) {
+        if (index == digits.length()) { // 到了叶子节点退出当前回溯
             combinations.push_back(combination);
         } else {
             char digit = digits[index];
