@@ -25,6 +25,8 @@ public:
 
             fast = fast->next->next;
             if (fast == slow) {
+                // 构造第二轮相遇，p指向链表头部
+                // 最终在入环点相遇
                 ListNode *p = head;
                 while (p != slow) {
                     p = p->next;
