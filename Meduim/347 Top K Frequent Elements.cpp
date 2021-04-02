@@ -16,11 +16,14 @@ public:
 
     vector<int> topKFrequent(vector<int> &nums, int k) {
         unordered_map<int, int> map;
+        // 先建立映射
         for (auto key:nums) {
             map[key]++;
         }
 
+        // 小顶堆
         priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(&compare)> q(compare);
+        // 按次序取映射中的元素，放入堆中比较
         for (auto &[num, count]:map) {
             if (q.size() == k) {
                 if (q.top().second < count) {
