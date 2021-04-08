@@ -15,7 +15,9 @@ public:
 
         // 前缀和，<和，出现次数>
         for (auto x:nums) {
-            pre += x;
+            pre += x; // 计算前缀和
+            // pre[j−1]==pre[i]−k
+            // 用pre变量来记录pre[i−1]
             if (map.find(pre - k) != map.end()) {
                 count += map[pre - k];
             }
