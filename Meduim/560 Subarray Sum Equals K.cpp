@@ -13,6 +13,7 @@ public:
         map[0] = 1;
         int count = 0, pre = 0;
 
+        // 前缀和，<和，出现次数>
         for (auto x:nums) {
             pre += x;
             if (map.find(pre - k) != map.end()) {
