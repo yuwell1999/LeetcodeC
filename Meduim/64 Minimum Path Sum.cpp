@@ -18,7 +18,6 @@ public:
         int rows = grid.size(), cols = grid[0].size();
 
         auto dp = vector<vector<int>>(rows, vector<int>(cols));
-
         dp[0][0] = grid[0][0];
         for (int i = 1; i < rows; i++) {
             dp[i][0] = dp[i - 1][0] + grid[i][0];
