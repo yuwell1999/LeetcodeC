@@ -12,6 +12,7 @@
  */
 
 # include "ListNode.h"
+
 class Solution_142 {
 public:
     ListNode *detectCycle(ListNode *head) {

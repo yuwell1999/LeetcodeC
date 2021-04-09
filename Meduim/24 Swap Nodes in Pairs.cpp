@@ -6,10 +6,10 @@
 
 class Solution {
 public:
-    ListNode* swapPairs(ListNode* head) {
+    ListNode *swapPairs(ListNode *head) {
         // 递归版本
         // 终止条件是链表中没有节点或者是只有一个节点，此时无法进行交换
-        if(head== nullptr || head->next == nullptr){
+        if (head == nullptr || head->next == nullptr) {
             return head;
         }
 
