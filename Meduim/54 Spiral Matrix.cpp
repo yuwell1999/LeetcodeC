@@ -57,25 +57,29 @@ public:
             for (int i = left; i <= right; i++) {
                 ans.push_back(matrix[up][i]); // 向右移动到最右
             }
-            if (++up > down) {
+            ++up;
+            if (up > down) {
                 break; // 上边界大于下边界，遍历完成
             }
             for (int i = up; i <= down; i++) {
                 ans.push_back(matrix[i][right]);
             }
-            if (--right < left) {
+            --right;
+            if (right < left) {
                 break;
             }
             for (int i = right; i >= left; i--) {
                 ans.push_back(matrix[down][i]);
             }
-            if (--down < up) {
+            --down;
+            if (down < up) {
                 break;
             }
             for (int i = down; i >= up; i--) {
                 ans.push_back(matrix[i][left]);
             }
-            if (++left > right) {
+            ++left;
+            if (left > right) {
                 break;
             }
         }
